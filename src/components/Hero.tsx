@@ -9,7 +9,7 @@ const Hero = () => {
   const downloadCV = () => {
     // Create a temporary link to download the CV
     const link = document.createElement('a');
-    link.href = '/cv-victor-rocha.pdf';
+    link.href = 'https://drive.google.com/uc?export=download&id=1aci7XyQLrDTf_x-BJpIaNDFulYuM77c9'; // Direct download link
     link.download = 'Victor-Rocha-CV.pdf';
     document.body.appendChild(link);
     link.click();
@@ -81,7 +81,7 @@ const Hero = () => {
             </button>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/in/victor-rocha"
+                href="https://linkedin.com/in/rocha-victor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group"
@@ -90,7 +90,7 @@ const Hero = () => {
                 <Linkedin className="w-6 h-6 text-blue-600 group-hover:text-blue-700" />
               </a>
               <a
-                href="https://github.com/victorrocha"
+                href="https://github.com/hugoxy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200 dark:border-gray-700 group"
