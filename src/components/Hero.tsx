@@ -31,7 +31,8 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in-up">
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
-                <span className="text-4xl font-bold text-gray-700 dark:text-gray-300">VR</span>
+                <span className="text-4xl font-bold text-gray-700 dark:text-gray-300"><img src="/src/images/Profile2.jpeg" alt="VR" className="rounded-full w-full h-full object-cover" />
+</span>
               </div>
             </div>
           </div>
@@ -47,7 +48,7 @@ const Hero = () => {
           <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 animate-fade-in-up animation-delay-400">
             <div className="mb-2">Desenvolvedor de Software</div>
             <div className="text-lg font-medium bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Chatbots • C# • APIs REST • Integrações • Blip & IA
+              Chatbots/Voicebots • C# • APIs REST • Integrações • Blip & IA
             </div>
           </div>
 

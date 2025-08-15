@@ -83,10 +83,9 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+          <div className="flex justify-center">
+            <div className="w-full max-w-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
                 Informações de Contato
               </h3>
               
@@ -122,10 +121,10 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white text-center">
                   Conecte-se comigo
                 </h4>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 justify-center">
                   <a
                     href="https://linkedin.com/in/rocha-victor"
                     target="_blank"
@@ -136,7 +135,7 @@ const Contact = () => {
                     <Linkedin className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                   <a
-                    href="https://github.com/victorrocha"
+                    href="https://github.com/hugoxy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-700 dark:bg-gray-600 rounded-lg text-white hover:bg-gray-800 dark:hover:bg-gray-500 transition-all duration-300 hover:scale-110 group"
@@ -147,7 +146,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
