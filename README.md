@@ -121,36 +121,3 @@ Para configurar no subdomínio `curriculo.gont.com.br`:
 3. **Projetos**: Edite `src/components/Projects.tsx`
 4. **Contato**: Edite `src/components/Contact.tsx`
 
-### Atualizando CV PDF
-1. Substitua `public/cv-victor-rocha.pdf`
-2. Mantenha o mesmo nome do arquivo
-
-## 🔍 SEO
-
-- Meta tags otimizadas
-- Open Graph para redes sociais
-- Schema markup (JSON-LD)
-- Sitemap automático
-- URLs semânticas
-
-## 🎯 Melhorias Futuras
-
-- [ ] Blog integrado
-- [ ] Sistema de comentários/depoimentos
-- [ ] Analytics integrado
-- [ ] A/B testing para otimização
-- [ ] PWA (Progressive Web App)
-- [ ] Integração com CMS headless
-- [ ] Multilíngue (Português/Inglês)
-
-## 📧 Contato
-
-Para suporte ou dúvidas sobre o portfólio:
-
-- **Email**: xhugo@live.com
-- **Telefone**: (31) 97570-5747
-- **LinkedIn**: [Victor G. Rocha](https://linkedin.com/in/victor-rocha)
-
----
-
-**Desenvolvido com ❤️ por Victor G. Rocha**
