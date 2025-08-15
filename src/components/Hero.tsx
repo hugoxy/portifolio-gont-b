@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in-up">
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
-                <span className="text-4xl font-bold text-gray-700 dark:text-gray-300"><img src="/src/images/Profile2.jpeg" alt="VR" className="rounded-full w-full h-full object-cover" />
+                <span className="text-4xl font-bold text-gray-700 dark:text-gray-300"><img src="https://i.imgur.com/Rw82UqC.jpeg" alt="VR" className="rounded-full w-full h-full object-cover" />
 </span>
               </div>
             </div>

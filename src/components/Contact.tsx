@@ -59,14 +59,6 @@ const Contact = () => {
     }
   ];
 
-  const subjectOptions = [
-    "Oportunidade de Trabalho",
-    "Proposta de Projeto",
-    "Consultoria",
-    "Parceria",
-    "Outro"
-  ];
-
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
