@@ -110,7 +110,7 @@ const Footer = () => {
                 © {new Date().getFullYear()} Victor G. Rocha. Todos os direitos reservados.
               </p>
               <div className="flex items-center space-x-6 text-sm">
-                <span>curriculo.gont.com.br</span>
+                <span>curriculo.gonti.com.br</span>
                 <span>•</span>
                 <span>Desenvolvedor de Software</span>
               </div>

@@ -93,7 +93,7 @@ O portfólio é otimizado para hospedagens estáticas:
 
 ## 🔧 Configuração do Domínio
 
-Para configurar no subdomínio `curriculo.gont.com.br`:
+Para configurar no subdomínio `curriculo.gonti.com.br`:
 
 1. **DNS**: Configure um CNAME record apontando para o provider de hospedagem
 2. **SSL**: Configure certificado SSL (normalmente automático)
