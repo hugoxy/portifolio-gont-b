@@ -1,123 +1,132 @@
-# Victor G. Rocha - Portfólio Profissional
+# Victor G. Rocha — Currículo
 
-Portfólio profissional desenvolvido para destacar a experiência e competências de Victor G. Rocha como Desenvolvedor de Software especializado em chatbots, integrações back-end e APIs REST.
+Currículo profissional estático, publicado em [curriculo.gonti.com.br](https://curriculo.gonti.com.br).
+HTML5 + CSS3 + JavaScript vanilla — **zero dependências, zero build step, zero CDN de terceiros**
+(exceto a fonte do Google Fonts). Sobe direto no GitHub Pages.
 
-## 🚀 Tecnologias Utilizadas
+Mesma linguagem visual do site institucional [gonti.com.br](https://gonti.com.br): os dois
+compartilham tokens, camadas de CSS e padrões de componente.
 
-- **Frontend**: React 18, TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Icons**: Lucide React
-- **Animations**: CSS Animations + Tailwind
-- **Fonts**: Inter (Google Fonts)
+## ✨ O que tem aqui
 
-## 📋 Funcionalidades
+**Visual**
+- Design system em CSS puro com `@layer`, custom properties e `color-mix()`
+- Tema claro/escuro com persistência e sincronia automática com o sistema operacional
+- Fundo animado (blobs em gradiente + grade com máscara radial)
+- Glassmorphism no header, cards e painéis
+- **Cubo 3D** em CSS puro (`preserve-3d`) nas frentes de atuação, com rotação automática,
+  controles por aba e painel de texto sincronizado
+- **Inclinação 3D** com perspectiva nos cartões de certificação, seguindo o cursor
+- Cards com _spotlight_ que acompanha o cursor
+- Linha do tempo da experiência com atividades recolhíveis, marquee da stack e terminal simulado
+- Barra de progresso de leitura, scrollspy na navegação e botão "voltar ao topo"
 
-- ✅ Design responsivo (Mobile-first)
-- ✅ Modo escuro/claro
-- ✅ Navegação suave entre seções
-- ✅ Animações e micro-interações
-- ✅ Formulário de contato funcional
-- ✅ Download de currículo em PDF
-- ✅ Otimização para SEO
-- ✅ Performance otimizada
+**Engenharia**
+- Ícones em sprite SVG inline — sem requisição externa, sem FOUC
+- Tema aplicado antes da primeira pintura (script inline no `<head>`), sem flash
+- `IntersectionObserver` para reveals, contadores e scrollspy; scroll com `requestAnimationFrame`
+- **Durações calculadas em tempo de execução** a partir das datas de início/fim — o currículo
+  não envelhece sozinho entre um deploy e outro
+- Respeito total a `prefers-reduced-motion` e folha de estilo de impressão dedicada
+- Acessibilidade: skip link, landmarks, `aria-expanded`, `focus-visible`, contraste e navegação por teclado
 
-## 🏗️ Estrutura do Projeto
+**Distribuição — por link, não por busca**
+- `noindex, nofollow` no `<head>` e `Disallow: /` no `robots.txt`: a página é pública,
+  mas fica fora dos índices de busca. **Os dois andam juntos** — reverter só um lado
+  não recoloca a página no índice, e mantê-la fora depende de manter ambos.
+- Sem `sitemap.xml` e sem JSON-LD (`Person`): existiam só para buscadores, e o JSON-LD
+  ainda publicava nome, e-mail e telefone em formato legível por máquina.
+- Open Graph e Twitter Card **mantidos** — não influenciam indexação e são o que
+  gera a prévia decente quando você manda o link por WhatsApp, e-mail ou LinkedIn.
+- `canonical` e `site.webmanifest` mantidos; `404.html` já nascia `noindex`.
+
+## 🗂️ Estrutura
 
 ```
-src/
-├── components/
-│   ├── Header.tsx          # Navegação e menu mobile
-│   ├── Hero.tsx            # Seção principal com apresentação
-│   ├── About.tsx           # Sobre mim e destaques
-│   ├── Experience.tsx      # Experiências profissionais
-│   ├── Skills.tsx          # Habilidades técnicas e certificações
-│   ├── Projects.tsx        # Projetos e clientes
-│   ├── Education.tsx       # Formação e certificações
-│   ├── Contact.tsx         # Formulário de contato
-│   └── Footer.tsx          # Rodapé com informações
-├── App.tsx                 # Componente principal
-├── main.tsx               # Entry point
-└── index.css              # Estilos globais
+portifolio-gonti/
+├── index.html            # página única
+├── 404.html              # página de erro do GitHub Pages
+├── assets/
+│   ├── css/styles.css    # design system completo
+│   ├── js/main.js        # todas as interações
+│   └── images/
+│       ├── logo-mark.svg          # marca (monograma V)
+│       ├── favicon.svg            # favicon vetorial
+│       ├── profile.jpg            # foto usada no cartão de perfil e no Open Graph
+│       ├── GonTI_NoBG.png         # marca GonTI — apple-touch-icon e ícone do manifest
+│       └── GonTI_NoBG_White.png   # marca GonTI, versão clara
+├── CNAME                 # domínio customizado
+├── robots.txt            # Disallow: / — ver "Distribuição" acima
+├── site.webmanifest
+├── .nojekyll             # publica os arquivos como estão
+└── .github/workflows/deploy.yml   # publica a raiz no Pages, sem build
 ```
 
-## 🎨 Design System
+## 🔧 Rodar localmente
 
-### Cores
-- **Primary**: Azul (#2563eb)
-- **Secondary**: Verde/Teal (#059669)
-- **Accent**: Roxo (#7c3aed)
-- **Neutral**: Escalas de cinza
+Abrir o `index.html` no navegador já funciona. Para um ambiente mais fiel
+(caminhos absolutos do `404.html`, `manifest`, clipboard API):
 
-### Typography
-- **Font**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800, 900
-- **Line Heights**: 150% para body, 120% para headings
-
-### Spacing
-- Sistema baseado em 8px
-- Breakpoints: mobile (<768px), tablet (768-1024px), desktop (>1024px)
-
-## 🚀 Como Executar
-
-### Desenvolvimento
 ```bash
-npm install
-npm run dev
+# Python 3
+python -m http.server 8080
+
+# ou Node
+npx serve -l 8080 .
 ```
 
-### Build para Produção
-```bash
-npm run build
-npm run preview
-```
+Depois acesse `http://localhost:8080`.
 
-## 📦 Deploy
+> A API de clipboard (botões "Copiar") exige contexto seguro — funciona em
+> `localhost` e em HTTPS. Há fallback para `execCommand` nos demais casos.
 
-O portfólio é otimizado para hospedagens estáticas:
+## 🌐 Deploy
 
-### Netlify
-1. Conecte o repositório
-2. Build command: `npm run build`
-3. Publish directory: `dist`
+Qualquer push na branch `main` publica automaticamente pelo workflow em
+`.github/workflows/deploy.yml`, que envia a **raiz do repositório** como artefato.
+Não há passo de build — se um `npm install` reaparecer ali, a mudança está errada
+para este projeto.
 
-### Vercel
-1. Conecte o repositório
-2. Framework preset: Vite
-3. Build command: `npm run build`
-4. Output directory: `dist`
+- **Settings → Pages** → Source: `GitHub Actions`
+- **Settings → Pages → Custom domain**: `curriculo.gonti.com.br` (o arquivo `CNAME` cuida disso)
+- DNS: registro `CNAME` de `curriculo` → `hugoxy.github.io`
 
-### GitHub Pages
-1. Configure GitHub Actions para build automático
-2. Use o workflow para build e deploy
+## 🎨 Customização
 
-## 🔧 Configuração do Domínio
+| O que mudar | Onde |
+| --- | --- |
+| Cores, sombras, tipografia, raios | bloco `@layer tokens` em `assets/css/styles.css` |
+| Textos, experiências, certificações, contatos | `index.html` |
+| Ícones | sprite `<svg class="sprite">` no final do `index.html` (padrão Feather, 24×24) |
+| Marca | `<symbol id="i-logo">` no mesmo sprite + `assets/images/favicon.svg` e `logo-mark.svg` |
+| Frases rotativas do hero | array `words` em `assets/js/main.js` |
+| Faces do cubo 3D | `.cube__face` no `index.html` + painéis `.platform` correspondentes (mesma ordem) |
+| Tecnologias da esteira | `.marquee__group` no `index.html` (**duplicar nos dois `<ul>`** — o loop depende disso) |
+| Link do PDF do currículo | `href` dos dois botões "Baixar CV" no `index.html` |
 
-Para configurar no subdomínio `curriculo.gonti.com.br`:
+> ⚠️ O sprite de ícones é ocultado por `.sprite` (dimensão zero), **nunca** por
+> `display:none` — com `display:none` o gradiente da marca deixa de resolver dentro
+> dos elementos `<use>` e o logo renderiza sem preenchimento.
 
-1. **DNS**: Configure um CNAME record apontando para o provider de hospedagem
-2. **SSL**: Configure certificado SSL (normalmente automático)
-3. **SEO**: Verifique as meta tags no `index.html`
+### Cubo 3D e painéis: mantenha a ordem
 
-## 📱 Responsividade
+A face `data-face="N"` do cubo é sincronizada com o painel `data-panel="N"` e com o
+botão `data-face-btn="N"`. Ao adicionar ou remover uma frente, ajuste os três lugares
+e o `translateZ` das faces em `styles.css` (metade da largura do cubo).
 
-- **Mobile**: < 768px - Design otimizado para dispositivos móveis
-- **Tablet**: 768px - 1024px - Layout adaptado para tablets
-- **Desktop**: > 1024px - Experiência completa para desktop
+### Datas e durações
 
-## ⚡ Performance
+Cada período de trabalho carrega `data-start="AAAA-MM"` e, quando encerrado,
+`data-end="AAAA-MM"`. O texto dentro de `<span data-duration>` é reescrito pelo JS
+usando contagem inclusiva nas duas pontas — a mesma do LinkedIn, para o site não
+divergir do perfil. O valor escrito no HTML é só o fallback sem JS; ao editar uma
+data, atualize também esse texto.
 
-- **Lazy loading** de componentes
-- **Otimização de imagens**
-- **Minificação de CSS/JS**
-- **Preload de fontes**
-- **Compressão Gzip**
+O mesmo vale para os anos de carreira no bloco de números: o elemento com
+`data-career-since="2018-04"` é recalculado a cada carregamento.
 
-## 🛠️ Manutenção
+### Sobre os números
 
-### Atualizando Informações
-1. **Experiências**: Edite `src/components/Experience.tsx`
-2. **Habilidades**: Edite `src/components/Skills.tsx`
-3. **Projetos**: Edite `src/components/Projects.tsx`
-4. **Contato**: Edite `src/components/Contact.tsx`
-
+Os quatro números do topo (anos, empresas, clientes, certificações) são **contáveis
+na própria página** — nenhum é estimativa. Ao incluir uma certificação ou um cliente
+novo, ajuste o contador correspondente para que a nota abaixo continue verdadeira.

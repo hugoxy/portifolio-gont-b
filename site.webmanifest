@@ -1,0 +1,25 @@
+{
+  "name": "Victor G. Rocha — Desenvolvedor de Software",
+  "short_name": "Victor Rocha",
+  "description": "Currículo: chatbots na plataforma Blip, APIs REST em C#/.NET e integrações back-end.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f6fb",
+  "theme_color": "#5b4bf5",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/GonTI_NoBG.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

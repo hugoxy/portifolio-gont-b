@@ -1,0 +1,5 @@
+# Curriculo distribuido por link direto, nao por busca.
+# Sem acentos de proposito: robots.txt nao declara charset.
+# Ver tambem: <meta name="robots" content="noindex, nofollow"> no index.html.
+User-agent: *
+Disallow: /

@@ -1,39 +1,1122 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/images/GonTI_NoBG.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Victor G. Rocha - Desenvolvedor de Software | Chatbots, C#, APIs REST</title>
-    <meta name="description" content="Victor G. Rocha - Especialista em desenvolvimento de chatbots, integrações back-end e APIs REST. Experiência em Blip, C#/.NET, IBM Watson e metodologias ágeis.">
-    <meta name="keywords" content="desenvolvedor, software, chatbot, blip, csharp, dotnet, apis rest, integrações, watson, devops">
-    <meta name="author" content="Victor G. Rocha">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://curriculo.gonti.com.br">
-    <meta property="og:title" content="Victor G. Rocha - Desenvolvedor de Software">
-    <meta property="og:description" content="Especialista em chatbots, integrações back-end e APIs REST. Experiência sólida em Blip, C#/.NET e metodologias ágeis.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://curriculo.gonti.com.br">
-    <meta property="twitter:title" content="Victor G. Rocha - Desenvolvedor de Software">
-    <meta property="twitter:description" content="Especialista em chatbots, integrações back-end e APIs REST. Experiência sólida em Blip, C#/.NET e metodologias ágeis.">
-    
-    <!-- Additional SEO -->
-    <link rel="canonical" href="https://curriculo.gonti.com.br">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="pt-BR">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <title>Victor G. Rocha — Desenvolvedor de Software | Chatbots, C# e APIs REST</title>
+    <meta name="description" content="Currículo de Victor G. Rocha: desenvolvedor de software especializado em chatbots na plataforma Blip, APIs REST em C#/.NET e integrações back-end para os setores financeiro e saúde." />
+    <meta name="keywords" content="Victor Rocha, desenvolvedor de software, chatbot, Blip, C#, .NET, APIs REST, integrações, BFF, watsonx, OpenAI, Azure, Kubernetes, Belo Horizonte" />
+    <meta name="author" content="Victor G. Rocha" />
+    <link rel="canonical" href="https://curriculo.gonti.com.br/" />
+
+    <!-- Currículo por link, não por busca: a página é pública mas não deve ser
+         indexada. Reforçado por Disallow no robots.txt. Ao reverter, tirar os
+         dois juntos — só um dos lados não recoloca a página no índice. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+
+    <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#080a12" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Victor G. Rocha" />
+    <meta property="og:url" content="https://curriculo.gonti.com.br/" />
+    <meta property="og:title" content="Victor G. Rocha — Desenvolvedor de Software" />
+    <meta property="og:description" content="Chatbots na plataforma Blip, APIs REST em C#/.NET e integrações back-end. Experiência em projetos dos setores financeiro e saúde." />
+    <meta property="og:image" content="https://curriculo.gonti.com.br/assets/images/profile.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Victor G. Rocha — Desenvolvedor de Software" />
+    <meta name="twitter:description" content="Chatbots na plataforma Blip, APIs REST em C#/.NET e integrações back-end." />
+    <meta name="twitter:image" content="https://curriculo.gonti.com.br/assets/images/profile.jpg" />
+
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/images/GonTI_NoBG.png" sizes="any" />
+    <link rel="apple-touch-icon" href="assets/images/GonTI_NoBG.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Tema aplicado antes da pintura para evitar flash -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('cv.gonti.theme');
+          var dark = saved ? saved === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Fundo decorativo -->
+    <div class="backdrop" aria-hidden="true">
+      <div class="backdrop__grid"></div>
+      <div class="backdrop__blob backdrop__blob--1"></div>
+      <div class="backdrop__blob backdrop__blob--2"></div>
+      <div class="backdrop__blob backdrop__blob--3"></div>
+    </div>
+
+    <div class="progress" aria-hidden="true"><span class="progress__bar" id="progress-bar"></span></div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a class="brand" href="#topo" aria-label="Victor G. Rocha — início">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-logo" /></svg>
+          <span class="brand__text">
+            <strong>Victor G. Rocha</strong>
+            <small>Chatbots · C# · Integrações</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Navegação principal">
+          <a class="nav__link" href="#sobre">Sobre</a>
+          <a class="nav__link" href="#experiencia">Experiência</a>
+          <a class="nav__link" href="#habilidades">Habilidades</a>
+          <a class="nav__link" href="#projetos">Projetos</a>
+          <a class="nav__link" href="#formacao">Formação</a>
+          <a class="nav__link" href="#contato">Contato</a>
+          <a class="btn btn--primary btn--sm nav__cta" href="https://drive.google.com/uc?export=download&amp;id=1aci7XyQLrDTf_x-BJpIaNDFulYuM77c9" target="_blank" rel="noopener noreferrer">
+            Baixar CV
+            <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-btn" type="button" data-action="toggle-theme" aria-label="Alternar tema claro e escuro" title="Alternar tema">
+            <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun" /></svg>
+            <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon" /></svg>
+          </button>
+          <button class="icon-btn nav-toggle" type="button" data-action="toggle-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+            <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu" /></svg>
+            <svg class="icon icon--close" aria-hidden="true"><use href="#i-x" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <span id="topo" class="anchor"></span>
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow reveal">
+              <span class="eyebrow__dot"></span>
+              Aberto a novas oportunidades
+            </p>
+
+            <h1 class="hero__title reveal" data-reveal-delay="1">Victor G. Rocha</h1>
+
+            <p class="hero__role reveal" data-reveal-delay="2">
+              Desenvolvedor de Software — eu construo
+              <span class="rotator" id="rotator" aria-live="polite">
+                <span class="rotator__text">chatbots que resolvem</span>
+              </span>
+            </p>
+
+            <p class="hero__lead reveal" data-reveal-delay="3">
+              Especialista em <strong>soluções conversacionais</strong> e <strong>integrações back-end</strong>,
+              com foco em performance e escalabilidade. Experiência sólida na plataforma <strong>Blip</strong>,
+              em <strong>C#/.NET</strong> e em metodologias ágeis, atuando em projetos dos setores financeiro e saúde.
+            </p>
+
+            <div class="hero__actions reveal" data-reveal-delay="4">
+              <a class="btn btn--primary btn--lg" href="https://drive.google.com/uc?export=download&amp;id=1aci7XyQLrDTf_x-BJpIaNDFulYuM77c9" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-download" /></svg>
+                Baixar currículo (PDF)
+              </a>
+              <a class="btn btn--ghost btn--lg" href="#experiencia">
+                Ver experiência
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+              </a>
+              <span class="social">
+                <a href="https://linkedin.com/in/rocha-victor" target="_blank" rel="noopener noreferrer" aria-label="Perfil no LinkedIn" title="LinkedIn">
+                  <svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>
+                </a>
+                <a href="https://github.com/hugoxy" target="_blank" rel="noopener noreferrer" aria-label="Perfil no GitHub" title="GitHub">
+                  <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                </a>
+              </span>
+            </div>
+
+            <ul class="hero__trust reveal" data-reveal-delay="5">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Blip &amp; Genesys Cloud</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> APIs REST em C# / .NET</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Financeiro &amp; saúde</li>
+            </ul>
+          </div>
+
+          <!-- Cartão de perfil -->
+          <div class="hero__visual reveal" data-reveal-delay="2">
+            <div class="profile">
+              <div class="profile__glow" aria-hidden="true"></div>
+              <div class="profile__card">
+                <div class="profile__bar">
+                  <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="profile__file">victor.rocha.cv</span>
+                  <span class="profile__status"><i class="pulse"></i> disponível</span>
+                </div>
+
+                <div class="profile__body">
+                  <div class="profile__avatar">
+                    <img src="assets/images/profile.jpg" width="320" height="320"
+                         alt="Retrato de Victor Rocha" loading="eager" decoding="async" />
+                  </div>
+                  <p class="profile__name">Victor G. Rocha</p>
+                  <p class="profile__role">Software Developer Senior</p>
+                  <ul class="profile__meta">
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg> Belo Horizonte, MG</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg> victor@gonti.com.br</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg> (31) 97351-7970</li>
+                  </ul>
+                </div>
+
+                <div class="profile__foot">
+                  <span>Blip</span><span>Genesys Cloud</span><span>C#</span><span>.NET</span><span>APIs REST</span>
+                </div>
+              </div>
+
+              <div class="floaty floaty--1" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg>
+                <span><strong>Blip</strong><small>certificado na plataforma</small></span>
+              </div>
+              <div class="floaty floaty--3" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-mic" /></svg>
+                <span><strong>Genesys Cloud</strong><small>certificado na plataforma</small></span>
+              </div>
+              <div class="floaty floaty--2" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#i-git-branch" /></svg>
+                <span><strong>CI/CD</strong><small>Kubernetes · SonarQube</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== NÚMEROS ==================== -->
+      <section class="section section--tight" aria-label="Números da trajetória">
+        <div class="container">
+          <div class="stats reveal">
+            <div class="stat">
+              <span class="stat__value" data-count="8" data-career-since="2018-04">8</span>
+              <span class="stat__label">Anos em tecnologia, desde 2018</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value" data-count="4">4</span>
+              <span class="stat__label">Empresas na trajetória profissional</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value" data-count="8">8</span>
+              <span class="stat__label">Clientes atendidos em projetos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__value" data-count="6">6</span>
+              <span class="stat__label">Certificações concluídas</span>
+            </div>
+          </div>
+          <p class="stats__note reveal">
+            Todos os números acima são contáveis nesta própria página — nenhum é estimativa.
+            Os anos de carreira são calculados a partir de abril de 2018.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== SOBRE ==================== -->
+      <section class="section section--alt" id="sobre">
+        <div class="container about">
+          <div class="about__copy reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Sobre mim</p>
+            <h2 class="section__title">Da conversa no chat ao sistema de retaguarda</h2>
+
+            <p>
+              Sou <strong>Desenvolvedor de Software</strong> especializado em soluções conversacionais,
+              com foco em chatbots, integrações back-end e construção de BFFs. Formado em
+              <strong>Sistemas de Informação pela PUC Minas</strong>, atuo na evolução e manutenção
+              de fluxos na plataforma Blip.
+            </p>
+            <p>
+              Tenho experiência sólida em integrações com <strong>Zendesk, HubSpot, Google Sheets,
+              IBM watsonx e OpenAI</strong>. Minha vivência anterior como analista de suporte N2
+              fortaleceu minhas habilidades analíticas, a visão técnica ampla e a capacidade de
+              resolver problemas em ambientes críticos.
+            </p>
+            <p>
+              Domino a stack <strong>.NET (C#)</strong>, práticas de <strong>DevOps
+              (CI/CD, Kubernetes, SonarQube)</strong> e metodologias ágeis (Scrum), atuando com
+              visão de produto e foco em entregas com impacto real.
+            </p>
+
+            <div class="about__values">
+              <div class="value">
+                <svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg>
+                <div><strong>Conversa e código no mesmo time</strong><span>Desenho o fluxo e escrevo a API que ele consome.</span></div>
+              </div>
+              <div class="value">
+                <svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg>
+                <div><strong>Vivência de operação</strong><span>Quatro anos em suporte técnico antes do desenvolvimento — sei onde quebra.</span></div>
+              </div>
+              <div class="value">
+                <svg class="icon" aria-hidden="true"><use href="#i-users" /></svg>
+                <div><strong>Squads ágeis</strong><span>Scrum, homologação com o cliente e decisões técnicas compartilhadas.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about__panel reveal" data-reveal-delay="1">
+            <div class="terminal">
+              <div class="terminal__bar" aria-hidden="true">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span>curl -s curriculo.gonti.com.br/perfil</span>
+              </div>
+              <pre class="terminal__body"><code><span class="c-dim">$</span> <span class="c-cmd">curl</span> -s https://curriculo.gonti.com.br/perfil | jq
+{
+  <span class="c-key">"nome"</span>:      <span class="c-str">"Victor G. Rocha"</span>,
+  <span class="c-key">"cargo"</span>:     <span class="c-str">"Software Developer Senior"</span>,
+  <span class="c-key">"empresa"</span>:   <span class="c-str">"Kainos&amp;Co"</span>,
+  <span class="c-key">"local"</span>:     <span class="c-str">"Belo Horizonte, MG — Brasil"</span>,
+  <span class="c-key">"formacao"</span>:  <span class="c-str">"Sistemas de Informação — PUC Minas"</span>,
+  <span class="c-key">"stack"</span>: [
+    <span class="c-str">"Blip"</span>, <span class="c-str">"Genesys Cloud"</span>, <span class="c-str">"C#"</span>, <span class="c-str">".NET"</span>,
+    <span class="c-str">"APIs REST"</span>, <span class="c-str">"SQL Server"</span>, <span class="c-str">"Azure"</span>
+  ],
+  <span class="c-key">"setores"</span>:   [<span class="c-str">"financeiro"</span>, <span class="c-str">"saúde"</span>],
+  <span class="c-key">"idiomas"</span>:   [<span class="c-str">"pt-BR nativo"</span>, <span class="c-str">"en intermediário"</span>]
+}
+<span class="c-ok">✓</span> 200 OK <span class="c-dim">— disponível para conversar</span> <span class="cursor"></span></code></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ==================== EXPERIÊNCIA ==================== -->
+      <section class="section" id="experiencia">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Trajetória</p>
+            <h2 class="section__title">Experiência profissional</h2>
+            <p class="section__lead">
+              Do suporte técnico de sistemas ao desenvolvimento sênior de chatbots — cada etapa somando
+              contexto de operação ao trabalho de engenharia.
+            </p>
+          </header>
+
+          <ol class="timeline">
+            <!-- Kainos&Co -->
+            <li class="job job--current reveal">
+              <span class="job__marker" aria-hidden="true"></span>
+              <article class="job__card">
+                <div class="job__head">
+                  <h3 class="job__role">Software Developer Senior</h3>
+                  <p class="job__company">Kainos&amp;Co</p>
+                  <span class="job__now">Posição atual</span>
+                </div>
+                <ul class="job__meta">
+                  <li data-start="2024-04">
+                    <svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+                    Abr 2024 — atual · <span data-duration>2 anos e 4 meses</span>
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg>
+                    São Paulo, SP — Brasil
+                  </li>
+                </ul>
+                <p class="job__desc">
+                  Desenvolvedor sênior em soluções conversacionais de ponta a ponta: <strong>chatbots</strong>
+                  e <strong>voicebots</strong> construídos em <strong>Blip</strong> e <strong>Genesys Cloud</strong>,
+                  com as APIs de integração em <strong>.NET</strong> que ligam esses fluxos aos sistemas de
+                  retaguarda. Entre os clientes atendidos, o <strong>Banco Safra</strong>.
+                </p>
+                <button class="job__toggle" type="button" data-action="toggle-job" aria-expanded="true" aria-controls="job-kainos" hidden>
+                  <span>Ocultar atividades</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+                </button>
+                <ul class="job__details" id="job-kainos">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Desenvolvimento e sustentação de chatbots e voicebots nas plataformas Blip e Genesys Cloud</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Construção das APIs de integração em .NET que conectam os fluxos aos sistemas do cliente</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Refatoração de fluxos legados para maior clareza, escalabilidade e manutenibilidade</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Criação e manutenção de documentações técnicas utilizando Figma e Miro</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Proposição de melhorias técnicas e funcionais com foco em performance e usabilidade</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Responsável por homologações em ambiente de desenvolvimento e junto ao cliente</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Execução de testes ativos e regressivos para garantir estabilidade e qualidade das entregas</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Atuação em squads ágeis com metodologia Scrum, participando ativamente de decisões técnicas</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Blip — dev -->
+            <li class="job reveal">
+              <span class="job__marker" aria-hidden="true"></span>
+              <article class="job__card">
+                <div class="job__head">
+                  <h3 class="job__role">Software Developer</h3>
+                  <p class="job__company">Blip</p>
+                </div>
+                <ul class="job__meta">
+                  <li data-start="2022-08" data-end="2024-04">
+                    <svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+                    Ago 2022 — Abr 2024 · <span data-duration>1 ano e 9 meses</span>
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg>
+                    Belo Horizonte, MG — Brasil
+                  </li>
+                </ul>
+                <p class="job__desc">
+                  Desenvolvedor de chatbots na plataforma Blip, responsável pela criação e manutenção
+                  dos fluxos conversacionais.
+                </p>
+                <button class="job__toggle" type="button" data-action="toggle-job" aria-expanded="true" aria-controls="job-blip-dev" hidden>
+                  <span>Ver atividades</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+                </button>
+                <ul class="job__details" id="job-blip-dev">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Desenvolvimento de APIs REST intermediárias (BFF) em C# .NET para integrar chatbots com sistemas internos e externos</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Integrações com Zendesk, HubSpot, Google Sheets, watsonx e OpenAI</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Atuação com JavaScript, C#, .NET, metodologias ágeis (Scrum), Kubernetes, pipelines de CI/CD e análise de qualidade com SonarQube</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Foco em clientes dos setores financeiro e saúde — entre eles Safra, Alelo, Méliuz, PicPay, Hermes Pardini, Dr.Consulta e Sanofi</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Blip — suporte -->
+            <li class="job reveal">
+              <span class="job__marker" aria-hidden="true"></span>
+              <article class="job__card">
+                <div class="job__head">
+                  <h3 class="job__role">Technical Support Analyst</h3>
+                  <p class="job__company">Blip</p>
+                </div>
+                <ul class="job__meta">
+                  <li data-start="2021-04" data-end="2022-08">
+                    <svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+                    Abr 2021 — Ago 2022 · <span data-duration>1 ano e 5 meses</span>
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg>
+                    Belo Horizonte, MG — Brasil
+                  </li>
+                </ul>
+                <p class="job__desc">
+                  Suporte técnico atuando e respondendo a incidentes de N2 da plataforma,
+                  acompanhando e garantindo o cumprimento do SLA.
+                </p>
+                <button class="job__toggle" type="button" data-action="toggle-job" aria-expanded="true" aria-controls="job-blip-sup" hidden>
+                  <span>Ver atividades</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+                </button>
+                <ul class="job__details" id="job-blip-sup">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Resolução de problemas e incidentes da plataforma Blip, aplicando conhecimentos em banco de dados SQL, Databricks, JavaScript, Kubernetes, cloud e infraestrutura</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Criação e leitura de queries em Microsoft SQL Server e Databricks</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Análise de dados e consultas relacionadas aos incidentes relatados pelo cliente utilizando Databricks</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Uso de metodologias ágeis para organização do time, backlog controlado, cumprimento de SLA e dailies de distribuição de tarefas</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Acompanhamento da infraestrutura com Nagios, SEQ, Grafana e Dynatrace</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Gerenciamento de infraestrutura em cloud Azure</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- Stefanini -->
+            <li class="job reveal">
+              <span class="job__marker" aria-hidden="true"></span>
+              <article class="job__card">
+                <div class="job__head">
+                  <h3 class="job__role">Support Analyst</h3>
+                  <p class="job__company">Stefanini Brasil</p>
+                </div>
+                <ul class="job__meta">
+                  <li data-start="2019-04" data-end="2021-04">
+                    <svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+                    Abr 2019 — Abr 2021 · <span data-duration>2 anos e 1 mês</span>
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg>
+                    Belo Horizonte, MG — Brasil
+                  </li>
+                </ul>
+                <p class="job__desc">
+                  Suporte ao usuário final via tickets no ServiceNow, referente a falhas e requisições
+                  nos equipamentos corporativos do cliente (CNH Industrial).
+                </p>
+                <button class="job__toggle" type="button" data-action="toggle-job" aria-expanded="true" aria-controls="job-stefanini" hidden>
+                  <span>Ver atividades</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+                </button>
+                <ul class="job__details" id="job-stefanini">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Instalação e configuração do VMware AirWatch (Hub Intelligent), suporte nível 1 em SAP e roteamento de tickets para o time central</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Gerenciamento de acessos GPO via Active Directory, auditorias de telecom e gestão de inventário</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Gestão dos sistemas de áudio e videoconferência (Cisco Videoconferência, Cisco TMS, Cisco Meeting Management)</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Atendimento executivo prioritário aos usuários VIP (diretoria)</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Acompanhamento de métricas ITIL para garantir o cumprimento dos acordos de nível de serviço (SLA)</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Melhoria contínua dos processos de suporte</li>
+                </ul>
+              </article>
+            </li>
+
+            <!-- CNH -->
+            <li class="job reveal">
+              <span class="job__marker" aria-hidden="true"></span>
+              <article class="job__card">
+                <div class="job__head">
+                  <h3 class="job__role">IT Apprentice</h3>
+                  <p class="job__company">CNH Industrial</p>
+                </div>
+                <ul class="job__meta">
+                  <li data-start="2018-04" data-end="2019-04">
+                    <svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg>
+                    Abr 2018 — Abr 2019 · <span data-duration>1 ano e 1 mês</span>
+                  </li>
+                  <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg>
+                    Belo Horizonte, MG — Brasil
+                  </li>
+                </ul>
+                <p class="job__desc">
+                  Aprendiz atuando no setor de tecnologia da informação da empresa (ICT).
+                </p>
+                <button class="job__toggle" type="button" data-action="toggle-job" aria-expanded="true" aria-controls="job-cnh" hidden>
+                  <span>Ver atividades</span>
+                  <svg class="icon" aria-hidden="true"><use href="#i-chevron-down" /></svg>
+                </button>
+                <ul class="job__details" id="job-cnh">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Contato com diversas tecnologias da área, auxiliando na gestão dos contratos e serviços dos fornecedores</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Auxílio na gestão dos sistemas de áudio e videoconferência (Cisco Videoconferência, Cisco TMS)</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Auxílio na gestão de salas de reunião e no atendimento a usuários VIP, com foco em agendamentos de telepresença</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ==================== HABILIDADES ==================== -->
+      <section class="section section--alt" id="habilidades">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Habilidades</p>
+            <h2 class="section__title">Quatro frentes que se encaixam</h2>
+            <p class="section__lead">
+              Chatbot sem integração não resolve, e integração sem operação não se sustenta.
+              Trabalho nas quatro pontas.
+            </p>
+          </header>
+
+          <div class="platforms">
+            <!-- Painéis de detalhe (o ativo é trocado pelos controles) -->
+            <div class="platforms__panels">
+              <article class="platform is-active" data-panel="0">
+                <span class="platform__tag"><svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg> Conversacional</span>
+                <h3>Chatbots &amp; Voicebots</h3>
+                <p>
+                  Construção e evolução de fluxos em <strong>Blip</strong> e <strong>Genesys Cloud</strong>:
+                  blocos reaproveitáveis, variáveis de contexto, roteamento e transbordo para atendimento
+                  humano — por texto ou por voz, com IA entrando onde ela resolve melhor que uma regra.
+                </p>
+                <ul class="platform__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Blip Builder, Desk e canais de mensageria</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Genesys Cloud para chatbot e voicebot na mesma operação</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Refatoração de fluxos legados para manutenibilidade</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> IBM watsonx Assistant e OpenAI</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Documentação técnica em Figma e Miro</li>
+                </ul>
+              </article>
+
+              <article class="platform" data-panel="1">
+                <span class="platform__tag"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg> Backend</span>
+                <h3>APIs em C# / .NET</h3>
+                <p>
+                  A camada que faz o bot deixar de responder "aguarde que já retorno". APIs REST
+                  intermediárias (BFF) em C# .NET ligando o fluxo conversacional aos sistemas internos
+                  e externos do cliente.
+                </p>
+                <ul class="platform__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> ASP.NET Core, APIs REST e webhooks</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> BFF entre chatbot e sistemas de retaguarda</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Documentação de contrato e testes</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> JavaScript e TypeScript no que orbita a API</li>
+                </ul>
+              </article>
+
+              <article class="platform" data-panel="2">
+                <span class="platform__tag"><svg class="icon" aria-hidden="true"><use href="#i-link" /></svg> Integrações</span>
+                <h3>Integrações</h3>
+                <p>
+                  A parte que costuma travar o projeto. Conecto o atendimento às ferramentas que a
+                  empresa já usa, tratando o que acontece quando o sistema do outro lado demora
+                  ou falha.
+                </p>
+                <ul class="platform__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Zendesk, HubSpot e Google Sheets</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> IBM watsonx e OpenAI dentro do fluxo</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Consumo de APIs REST existentes do cliente</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Homologação em desenvolvimento e junto ao cliente</li>
+                </ul>
+              </article>
+
+              <article class="platform" data-panel="3">
+                <span class="platform__tag"><svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg> Operação</span>
+                <h3>Dados &amp; DevOps</h3>
+                <p>
+                  Herança dos anos de suporte N2: saber olhar o banco, o log e o cluster antes de
+                  culpar o código. Consulta de dados, observabilidade e pipeline como parte do
+                  trabalho, não como etapa extra.
+                </p>
+                <ul class="platform__list">
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> SQL Server e Databricks para análise de incidentes</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Azure, Kubernetes e Docker</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Pipelines de CI/CD e qualidade com SonarQube</li>
+                  <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Monitoramento com Grafana, Dynatrace, Nagios e SEQ</li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- Cubo 3D: face N ↔ painel N ↔ botão N -->
+            <div class="platforms__stage">
+              <div class="cube-stage">
+                <div class="cube" id="cube">
+                  <div class="cube__face" data-face="0">
+                    <svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg>
+                    <strong>Chatbots &amp; Voicebots</strong>
+                    <small>Blip · Genesys · watsonx</small>
+                  </div>
+                  <div class="cube__face" data-face="1">
+                    <svg class="icon" aria-hidden="true"><use href="#i-server" /></svg>
+                    <strong>C# / .NET</strong>
+                    <small>APIs REST · BFF</small>
+                  </div>
+                  <div class="cube__face" data-face="2">
+                    <svg class="icon" aria-hidden="true"><use href="#i-link" /></svg>
+                    <strong>Integrações</strong>
+                    <small>Zendesk · HubSpot</small>
+                  </div>
+                  <div class="cube__face" data-face="3">
+                    <svg class="icon" aria-hidden="true"><use href="#i-activity" /></svg>
+                    <strong>Dados &amp; DevOps</strong>
+                    <small>SQL · Azure · CI/CD</small>
+                  </div>
+                  <div class="cube__cap cube__cap--top" aria-hidden="true"></div>
+                  <div class="cube__cap cube__cap--bottom" aria-hidden="true"></div>
+                </div>
+                <span class="cube__shadow" aria-hidden="true"></span>
+              </div>
+
+              <div class="cube__controls" role="tablist" aria-label="Escolher frente de atuação">
+                <button class="cube__dot is-active" type="button" role="tab" aria-selected="true" data-face-btn="0">Chatbots</button>
+                <button class="cube__dot" type="button" role="tab" aria-selected="false" data-face-btn="1">C# / .NET</button>
+                <button class="cube__dot" type="button" role="tab" aria-selected="false" data-face-btn="2">Integrações</button>
+                <button class="cube__dot" type="button" role="tab" aria-selected="false" data-face-btn="3">Dados &amp; DevOps</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee reveal" aria-label="Tecnologias que utilizo">
+          <div class="marquee__track">
+            <ul class="marquee__group">
+              <li class="is-core">Blip</li><li class="is-core">Genesys Cloud</li><li class="is-core">C#</li><li class="is-core">.NET</li>
+              <li>Voicebots</li><li>ASP.NET Core</li><li>APIs REST</li><li>BFF</li><li>JavaScript</li><li>TypeScript</li>
+              <li>SQL Server</li><li>Databricks</li><li>Azure</li><li>Kubernetes</li><li>Docker</li>
+              <li>CI/CD</li><li>SonarQube</li><li>Zendesk</li><li>HubSpot</li><li>IBM watsonx</li>
+              <li>OpenAI</li><li>Git &amp; GitHub</li><li>Scrum</li><li>ITIL</li>
+            </ul>
+            <ul class="marquee__group" aria-hidden="true">
+              <li class="is-core">Blip</li><li class="is-core">Genesys Cloud</li><li class="is-core">C#</li><li class="is-core">.NET</li>
+              <li>Voicebots</li><li>ASP.NET Core</li><li>APIs REST</li><li>BFF</li><li>JavaScript</li><li>TypeScript</li>
+              <li>SQL Server</li><li>Databricks</li><li>Azure</li><li>Kubernetes</li><li>Docker</li>
+              <li>CI/CD</li><li>SonarQube</li><li>Zendesk</li><li>HubSpot</li><li>IBM watsonx</li>
+              <li>OpenAI</li><li>Git &amp; GitHub</li><li>Scrum</li><li>ITIL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="skillsets">
+            <div class="skillset reveal">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg></span>
+                <h3>Chatbots &amp; IA</h3>
+              </div>
+              <ul class="tags">
+                <li class="is-core">Plataforma Blip</li><li class="is-core">Genesys Cloud</li>
+                <li>Chatbots</li><li>Voicebots</li>
+                <li>IBM watsonx Assistant</li><li>OpenAI</li>
+              </ul>
+            </div>
+
+            <div class="skillset reveal" data-reveal-delay="1">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-code" /></svg></span>
+                <h3>Desenvolvimento</h3>
+              </div>
+              <ul class="tags">
+                <li class="is-core">C# / .NET</li><li>APIs REST</li><li>BFF</li>
+                <li>JavaScript</li><li>TypeScript</li>
+              </ul>
+            </div>
+
+            <div class="skillset reveal" data-reveal-delay="2">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span>
+                <h3>Banco de dados</h3>
+              </div>
+              <ul class="tags">
+                <li>SQL Server</li><li>Databricks</li><li>SQL</li><li>NoSQL</li>
+              </ul>
+            </div>
+
+            <div class="skillset reveal">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud" /></svg></span>
+                <h3>Cloud &amp; infraestrutura</h3>
+              </div>
+              <ul class="tags">
+                <li>Microsoft Azure</li><li>Kubernetes</li><li>Docker</li><li>CI/CD</li>
+              </ul>
+            </div>
+
+            <div class="skillset reveal" data-reveal-delay="1">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-link" /></svg></span>
+                <h3>Integrações</h3>
+              </div>
+              <ul class="tags">
+                <li>Zendesk</li><li>HubSpot</li><li>Google Sheets</li><li>Webhooks</li>
+              </ul>
+            </div>
+
+            <div class="skillset reveal" data-reveal-delay="2">
+              <div class="skillset__head">
+                <span class="skillset__icon"><svg class="icon" aria-hidden="true"><use href="#i-git-branch" /></svg></span>
+                <h3>DevOps &amp; metodologias</h3>
+              </div>
+              <ul class="tags">
+                <li>Scrum</li><li>SonarQube</li><li>Git / GitHub</li><li>ITIL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PROJETOS ==================== -->
+      <section class="section" id="projetos">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Projetos</p>
+            <h2 class="section__title">O que construí na prática</h2>
+            <p class="section__lead">
+              Soluções conversacionais e integrações para clientes dos setores financeiro,
+              saúde e tecnologia.
+            </p>
+          </header>
+
+          <div class="bento">
+            <article class="card spotlight reveal">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg></span>
+              <p class="card__sub">Chatbot enterprise</p>
+              <h3 class="card__title">Chatbot Banco Safra</h3>
+              <p class="card__text">
+                Desenvolvimento e evolução de chatbots conversacionais para atendimento bancário,
+                com foco em performance e experiência do usuário.
+              </p>
+              <ul class="ticks">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Fluxos conversacionais otimizados</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Integrações com sistemas bancários</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Análise de performance e métricas</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Testes automatizados e homologações</li>
+              </ul>
+              <ul class="tags">
+                <li>Blip</li><li>C#</li><li>.NET</li><li>APIs REST</li><li>IBM watsonx</li>
+              </ul>
+            </article>
+
+            <article class="card spotlight reveal" data-reveal-delay="1">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-code" /></svg></span>
+              <p class="card__sub">Backend</p>
+              <h3 class="card__title">APIs de integração Blip</h3>
+              <p class="card__text">
+                Desenvolvimento de BFFs (Backend For Frontend) para integração de chatbots com
+                sistemas externos diversos.
+              </p>
+              <ul class="ticks">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> APIs REST escaláveis</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Integrações com CRMs</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Documentação técnica completa</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Monitoramento e observabilidade</li>
+              </ul>
+              <ul class="tags">
+                <li>C#</li><li>.NET Core</li><li>REST</li><li>Zendesk</li><li>HubSpot</li>
+              </ul>
+            </article>
+
+            <article class="card spotlight reveal" data-reveal-delay="2">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-database" /></svg></span>
+              <p class="card__sub">Infraestrutura</p>
+              <h3 class="card__title">Sustentação e monitoramento</h3>
+              <p class="card__text">
+                Atuação em incidentes de produção da plataforma: análise de dados, acompanhamento de
+                infraestrutura e gestão de SLA.
+              </p>
+              <ul class="ticks">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Consultas e análise de dados de incidentes</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Acompanhamento de métricas de infraestrutura</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Resolução de incidentes em ambiente crítico</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Gestão de SLA com metodologia ágil</li>
+              </ul>
+              <ul class="tags">
+                <li>SQL Server</li><li>Databricks</li><li>Azure</li><li>Kubernetes</li><li>Grafana</li>
+              </ul>
+            </article>
+
+            <article class="card card--wide spotlight reveal" data-reveal-delay="3">
+              <span class="card__icon"><svg class="icon" aria-hidden="true"><use href="#i-users" /></svg></span>
+              <p class="card__sub">Clientes &amp; parceiros</p>
+              <h3 class="card__title">Onde esse trabalho chegou</h3>
+              <p class="card__text">
+                Empresas para as quais atuei em projetos de chatbot, integração ou sustentação,
+                direta ou indiretamente.
+              </p>
+              <div class="clients">
+                <div class="client"><span class="client__initial" aria-hidden="true">S</span><span>Banco Safra</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">A</span><span>Alelo</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">M</span><span>Méliuz</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">P</span><span>PicPay</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">H</span><span>Hermes Pardini</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">D</span><span>Dr.Consulta</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">S</span><span>Sanofi</span></div>
+                <div class="client"><span class="client__initial" aria-hidden="true">C</span><span>CNH Industrial</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== FORMAÇÃO ==================== -->
+      <section class="section section--alt" id="formacao">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Formação</p>
+            <h2 class="section__title">Formação, idiomas e certificações</h2>
+            <p class="section__lead">
+              Base acadêmica em sistemas de informação, somada a certificações nas plataformas
+              e práticas que uso no dia a dia.
+            </p>
+          </header>
+
+          <div class="edu-grid">
+            <article class="edu reveal">
+              <div class="edu__head">
+                <span class="edu__icon"><svg class="icon" aria-hidden="true"><use href="#i-graduation" /></svg></span>
+                <div>
+                  <h3 class="edu__degree">Bacharelado em Sistemas de Informação</h3>
+                  <p class="edu__school">Pontifícia Universidade Católica de Minas Gerais (PUC Minas)</p>
+                  <ul class="edu__meta">
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg> 2015 — 2019</li>
+                    <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg> Belo Horizonte, MG</li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Formação sólida em desenvolvimento de software, análise de sistemas, banco de dados
+                e gestão de projetos de TI.
+              </p>
+              <ul class="tags">
+                <li>Programação orientada a objetos</li>
+                <li>Análise e projeto de sistemas</li>
+                <li>Banco de dados relacionais</li>
+                <li>Engenharia de software</li>
+                <li>Gestão de projetos</li>
+              </ul>
+            </article>
+
+            <div class="langs reveal" data-reveal-delay="1">
+              <div class="lang">
+                <span class="lang__code" aria-hidden="true">PT</span>
+                <div><strong>Português</strong><span>Nativo</span></div>
+              </div>
+              <div class="lang">
+                <span class="lang__code" aria-hidden="true">EN</span>
+                <div><strong>Inglês</strong><span>Intermediário</span></div>
+              </div>
+              <div class="lang">
+                <span class="lang__code" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-book" /></svg></span>
+                <div><strong>Aprendizado contínuo</strong><span>Atualização constante em desenvolvimento, IA e métodos ágeis.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="certs certs--spaced">
+            <article class="cert tilt reveal">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-award" /></svg></span>
+                <p class="cert__issuer">Genesys</p>
+                <h3 class="cert__name">Genesys Cloud:<br />Professional Certification</h3>
+                <p class="cert__desc">
+                  Credencial de nível profissional em Genesys Cloud, cobrindo Architect flows,
+                  roteamento, administração da plataforma e integrações.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Professional</span>
+              </div>
+            </article>
+
+            <article class="cert tilt reveal" data-reveal-delay="1">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-git-branch" /></svg></span>
+                <p class="cert__issuer">Certprof</p>
+                <h3 class="cert__name">DevOps Essentials<br />Professional Certificate (DEPC)</h3>
+                <p class="cert__desc">
+                  Práticas essenciais de DevOps, incluindo CI/CD, automação e cultura DevOps.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Certificado</span>
+              </div>
+            </article>
+
+            <article class="cert tilt reveal" data-reveal-delay="2">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-message-circle" /></svg></span>
+                <p class="cert__issuer">Blip</p>
+                <h3 class="cert__name">Criando chatbots com a plataforma Blip</h3>
+                <p class="cert__desc">
+                  Certificação oficial da plataforma Blip para desenvolvimento de chatbots
+                  conversacionais.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Certificado</span>
+              </div>
+            </article>
+
+            <article class="cert tilt reveal">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-server" /></svg></span>
+                <p class="cert__issuer">desenvolvedor.io</p>
+                <h3 class="cert__name">REST com ASP.NET Core WebAPI</h3>
+                <p class="cert__desc">
+                  Desenvolvimento de APIs REST utilizando ASP.NET Core — a base do trabalho de
+                  integração.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Certificado</span>
+              </div>
+            </article>
+
+            <article class="cert tilt reveal" data-reveal-delay="1">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-cpu" /></svg></span>
+                <p class="cert__issuer">IBM</p>
+                <h3 class="cert__name">Watsonx Assistant<br />Technical Sales Intermediate</h3>
+                <p class="cert__desc">
+                  Certificação intermediária em vendas técnicas do IBM watsonx Assistant.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Intermediário</span>
+              </div>
+            </article>
+
+            <article class="cert tilt reveal" data-reveal-delay="2">
+              <div class="cert__inner">
+                <span class="cert__seal"><svg class="icon" aria-hidden="true"><use href="#i-zap" /></svg></span>
+                <p class="cert__issuer">IBM</p>
+                <h3 class="cert__name">Watsonx Assistant<br />Sales Foundation</h3>
+                <p class="cert__desc">
+                  Fundamentos de venda e implementação do IBM watsonx Assistant.
+                </p>
+                <span class="cert__badge"><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg> Certificado</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CTA ==================== -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-band reveal">
+            <div class="cta-band__glow" aria-hidden="true"></div>
+            <h2>Procurando alguém que entenda dos dois lados?</h2>
+            <p>
+              Fluxo conversacional e API de integração raramente moram na mesma pessoa.
+              Se é isso que o seu time precisa, vamos conversar.
+            </p>
+            <div class="cta-band__actions">
+              <a class="btn btn--light btn--lg" href="mailto:victor@gonti.com.br?subject=Oportunidade%20—%20contato%20pelo%20curr%C3%ADculo">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg>
+                victor@gonti.com.br
+              </a>
+              <a class="btn btn--outline btn--lg" href="https://linkedin.com/in/rocha-victor" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-linkedin" /></svg>
+                Conectar no LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTATO ==================== -->
+      <section class="section" id="contato">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow"><span class="eyebrow__dot"></span> Contato</p>
+            <h2 class="section__title">Vamos conversar</h2>
+            <p class="section__lead">
+              Estou sempre aberto a novas oportunidades e projetos desafiadores.
+              Escolha o canal que preferir.
+            </p>
+          </header>
+
+          <div class="contacts">
+            <article class="contact spotlight reveal">
+              <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail" /></svg></span>
+              <h3 class="contact__label">E-mail</h3>
+              <a class="contact__value" href="mailto:victor@gonti.com.br">victor@gonti.com.br</a>
+              <button class="copy" type="button" data-copy="victor@gonti.com.br" aria-label="Copiar e-mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+                <span>Copiar</span>
+              </button>
+            </article>
+
+            <article class="contact spotlight reveal" data-reveal-delay="1">
+              <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg></span>
+              <h3 class="contact__label">Telefone</h3>
+              <a class="contact__value" href="tel:+5531975705747">(31) 97351-7970</a>
+              <button class="copy" type="button" data-copy="(31) 97351-7970" aria-label="Copiar telefone">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+                <span>Copiar</span>
+              </button>
+            </article>
+
+            <article class="contact spotlight reveal" data-reveal-delay="2">
+              <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin" /></svg></span>
+              <h3 class="contact__label">Localização</h3>
+              <address class="contact__value contact__value--plain">
+                Belo Horizonte, MG — Brasil<br />
+                Disponível para trabalho remoto e híbrido
+              </address>
+            </article>
+
+            <article class="contact spotlight reveal" data-reveal-delay="3">
+              <span class="contact__icon"><svg class="icon" aria-hidden="true"><use href="#i-link" /></svg></span>
+              <h3 class="contact__label">Redes</h3>
+              <a class="contact__value" href="https://linkedin.com/in/rocha-victor" target="_blank" rel="noopener noreferrer">linkedin.com/in/rocha-victor</a>
+              <a class="copy" href="https://github.com/hugoxy" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+                <span>github.com/hugoxy</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#topo" aria-label="Victor G. Rocha — início">
+            <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-logo" /></svg>
+            <span class="brand__text"><strong>Victor G. Rocha</strong><small>Chatbots · C# · Integrações</small></span>
+          </a>
+          <p>
+            Desenvolvedor de software especializado em chatbots, integrações e APIs REST.
+            Belo Horizonte, MG — Brasil.
+          </p>
+        </div>
+
+        <nav class="footer__col" aria-label="Navegação">
+          <h3>Navegação</h3>
+          <a href="#sobre">Sobre</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#formacao">Formação</a>
+        </nav>
+
+        <nav class="footer__col" aria-label="Especialidades">
+          <h3>Especialidades</h3>
+          <a href="#habilidades">Chatbots &amp; Voicebots</a>
+          <a href="#habilidades">APIs em C# / .NET</a>
+          <a href="#habilidades">Integrações</a>
+          <a href="#habilidades">Dados &amp; DevOps</a>
+        </nav>
+
+        <div class="footer__col">
+          <h3>Contato</h3>
+          <a href="mailto:victor@gonti.com.br">victor@gonti.com.br</a>
+          <a href="tel:+5531975705747">(31) 97351-7970</a>
+          <a href="https://linkedin.com/in/rocha-victor" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/hugoxy" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="footer__muted">Belo Horizonte, MG — Brasil</span>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <span>© <span id="year">2026</span> Victor G. Rocha · Todos os direitos reservados.</span>
+        <span>curriculo.gonti.com.br · Desenvolvedor de Software</span>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" data-action="to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up" /></svg>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- ==================== SPRITE DE ÍCONES ==================== -->
+    <!-- `display:none` quebraria o gradiente da marca quando referenciado via <use>;
+         por isso o sprite é ocultado por dimensão zero, não por display. -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="g-brand" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#5b4bf5" />
+          <stop offset="0.55" stop-color="#8b5cf6" />
+          <stop offset="1" stop-color="#06b6d4" />
+        </linearGradient>
+      </defs>
+      <symbol id="i-logo" viewBox="0 0 48 48">
+        <rect width="48" height="48" rx="13" fill="url(#g-brand)" />
+        <path d="M13 13.5 24 34.5 35 13.5" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/><line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/><line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+      <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+      <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+      <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-git-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
+      <symbol id="i-graduation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9.5 12 4.5 2 9.5l10 5 10-5z"/><path d="M6 11.7V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-5.3"/><line x1="22" y1="9.5" x2="22" y2="15.5"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="2"/><line x1="16" y1="2.5" x2="16" y2="6.5"/><line x1="8" y1="2.5" x2="8" y2="6.5"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+      <symbol id="i-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6.5 12 13.5 2 6.5"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    </svg>
+
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>
